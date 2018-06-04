@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>boot_parent</groupId>
+	<artifactId>boot_parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<spring-boot.version>1.5.7.RELEASE</spring-boot.version>
+		<spring-cloud.version>Dalston.SR3</spring-cloud.version>
+		
+		<maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- spring boot 默认支持logback日志框架，logging是关联包 -->
+		<!-- 控制台输出日志级别：TRACE < DEBUG < INFO < WARN < ERROR < FATAL。默认INFO -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-logging</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		 <dependency>  
+            <groupId>org.springframework.cloud</groupId>  
+            <artifactId>spring-cloud-starter-feign</artifactId>  
+        </dependency>  
+        
+        
+	</dependencies>
+
+	<!-- 加入该配置后，spring boot类型的子项目，可不用配置org.springframework.boot的<parent>标签 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring-boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			
+			<dependency>  
+            <groupId>org.springframework.cloud</groupId>  
+            <artifactId>spring-cloud-starter-hystrix</artifactId>  
+        </dependency>  
+        <dependency>  
+            <groupId>org.springframework.cloud</groupId>  
+            <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>  
+        </dependency>  
+		</dependencies>
+	</dependencyManagement>
+
+	<modules>
+		
+		
+		<module>boot_eureka</module>
+		<module>boot_web</module>
+		<module>boot_service</module>
+		<module>boot_service_interface</module>
+	</modules>
+</project>
