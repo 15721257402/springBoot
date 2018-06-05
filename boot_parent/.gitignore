@@ -11,6 +11,7 @@ logs/
 .project
 .settings
 .springBeans
+.lst
 
 ### IntelliJ IDEA ###
 .idea
