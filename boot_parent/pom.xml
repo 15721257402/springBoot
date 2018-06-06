@@ -74,11 +74,10 @@
 	</dependencyManagement>
 
 	<modules>
-		
-		
 		<module>boot_eureka</module>
 		<module>boot_web</module>
 		<module>boot_service</module>
 		<module>boot_service_interface</module>
+		<module>boot_utils</module>
 	</modules>
 </project>

@@ -32,6 +32,13 @@
 	      <groupId>org.springframework.cloud</groupId>
 	      <artifactId>spring-cloud-starter-feign</artifactId>
 	  	</dependency>
+	  	
+	  	<!--utils -->
+	  	<dependency>
+	  	  <groupId>boot_parent</groupId>
+          <artifactId>boot_utils</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+	  	</dependency>
 	</dependencies>
 
 
