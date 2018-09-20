@@ -15,7 +15,7 @@ public class TestController {
 	@Autowired
 	private TestService testService;
 	
-	//hahahahss
+	//hahahahss dev
 	@RequestMapping("test")
 	public String test(@RequestBody String isWho){
 		return isWho+"调用service"+"this is service a method return"+testService.getUserName();
