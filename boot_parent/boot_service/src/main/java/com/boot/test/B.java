@@ -10,5 +10,6 @@ public class B implements Interf {
     public void ceLMothod() {
         System.out.print("我是B");
         System.out.print("第一提交");
+        System.out.print("maset再次提交");
     }
 }
