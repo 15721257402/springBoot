@@ -12,6 +12,9 @@ public class TestService {
 	private UserMapper userMapper;
 	
       public String getUserName(){
-    	  return userMapper.selectByPrimaryKey(1).getUserName();
+
+      	System.out.print("dev提交");
+		  System.out.print("dev再次提交");
+		  return userMapper.selectByPrimaryKey(1).getUserName();
       }
 }
