@@ -12,11 +12,7 @@ public class TestService {
 	private UserMapper userMapper;
 	
       public String getUserName(){
-
-      	System.out.print("dev提交");
-		  System.out.print("dev再次提交");
-
-		  System.out.print("dev提交2019-0103");
+		  System.out.print("初次提交");
 		  return userMapper.selectByPrimaryKey(1).getUserName();
       }
 }
