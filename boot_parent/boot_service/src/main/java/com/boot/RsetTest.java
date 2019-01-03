@@ -8,5 +8,6 @@ package com.boot;
 public class RsetTest {
     public static void main(String[] args){
         System.out.print("初次提交");
+        System.out.print("再次提交2");
     }
 }

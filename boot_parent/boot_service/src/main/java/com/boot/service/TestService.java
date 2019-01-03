@@ -13,6 +13,7 @@ public class TestService {
 	
       public String getUserName(){
 		  System.out.print("初次提交");
+		  System.out.print("再次提交2");
 		  return userMapper.selectByPrimaryKey(1).getUserName();
       }
 }
