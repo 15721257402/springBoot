@@ -7,5 +7,6 @@ package com.boot;
  **/
 public class TestReset {
     public static void main(String[] args){
+        System.out.print("1");
     }
 }
