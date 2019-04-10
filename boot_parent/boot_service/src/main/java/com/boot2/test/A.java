@@ -1,4 +1,4 @@
-package com.boot.test;
+package com.boot2.test;
 
 /**
  * @Description: TDD

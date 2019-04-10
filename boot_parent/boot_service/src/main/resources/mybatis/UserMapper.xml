@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.boot.dao.UserMapper" >
-  <resultMap id="BaseResultMap" type="com.boot.model.User" >
+<mapper namespace="com.boot2.dao.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.boot2.model.User" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="user_name" property="userName" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
@@ -25,7 +25,7 @@
     delete from user
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.boot.model.User" >
+  <insert id="insert" parameterType="com.boot2.model.User" >
     insert into user (id, user_name, password, 
       real_name, mobile, email, 
       id_card, register_time, is_effective
@@ -35,7 +35,7 @@
       #{idCard,jdbcType=VARCHAR}, #{registerTime,jdbcType=TIMESTAMP}, #{isEffective,jdbcType=BIT}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.boot.model.User" >
+  <insert id="insertSelective" parameterType="com.boot2.model.User" >
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -96,7 +96,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.boot.model.User" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.boot2.model.User" >
     update user
     <set >
       <if test="userName != null" >
@@ -126,7 +126,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.boot.model.User" >
+  <update id="updateByPrimaryKey" parameterType="com.boot2.model.User" >
     update user
     set user_name = #{userName,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},

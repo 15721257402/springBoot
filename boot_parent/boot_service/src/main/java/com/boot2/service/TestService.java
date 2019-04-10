@@ -1,9 +1,8 @@
-package com.boot.service;
+package com.boot2.service;
 
+import com.boot2.dao.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.boot.dao.UserMapper;
 
 @Service
 public class TestService {
